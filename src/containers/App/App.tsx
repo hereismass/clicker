@@ -1,8 +1,12 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { useAppSelector, useAppDispatch } from '../../hooks/redux';
+import { click, selectGold } from '../../clickerSlice';
+
 function App() {
+  const gold = useAppSelector(selectGold);
+  const dispatch = useAppDispatch();
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +14,12 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
+        <button
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={() => {dispatch(click())}}
         >
-          Learn React
-        </a>
+          count is {gold}
+        </button>
       </header>
     </div>
   );
