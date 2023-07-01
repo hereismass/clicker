@@ -1,23 +1,36 @@
-type Generator = {
+export type Generator = {
   basePrice: number;
   baseGoldPerSecond: number;
+  rateGrowth: number;
 };
 
-export const generators = ['pickaxe', 'laser', 'dwarf'];
+export const generators = ["pickaxe", "laser", "dwarf"] as const;
 
+export type GeneratorType = (typeof generators)[number];
 
-export const pickaxe: Generator = {
+const pickaxe: Generator = {
   basePrice: 10,
-  baseGoldPerSecond: 1
+  baseGoldPerSecond: 1,
+  rateGrowth: 1.1,
 };
 
-
-export const laser: Generator = {
+const laser: Generator = {
   basePrice: 100,
-  baseGoldPerSecond: 10
+  baseGoldPerSecond: 10,
+  rateGrowth: 1.1,
 };
 
-export const dwarf: Generator = {
+const dwarf: Generator = {
   basePrice: 1500,
-  baseGoldPerSecond: 100
+  baseGoldPerSecond: 100,
+  rateGrowth: 1.1,
 };
+
+export const generatorsConfig = {
+  pickaxe,
+  laser,
+  dwarf,
+};
+
+// we auto mine 4 times per second
+export const UPDATE_FREQUENCY = 4;
