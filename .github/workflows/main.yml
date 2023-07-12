@@ -20,7 +20,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-        
+
 jobs:
   # Build job
   build:
@@ -33,9 +33,9 @@ jobs:
       - name: install deps
         run: npm ci
       - name: run tests
-        run:: npm test
+        run: npm test
       - name: Build app
-        run: 
+        run: npm run build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
