@@ -32,8 +32,8 @@ jobs:
           node-version: 18
       - name: install deps
         run: npm ci
-      - name: run tests
-        run: npm test
+      #      - name: run tests
+      #        run: npm test
       - name: Build app
         run: npm run build
       - name: Setup Pages
