@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>You have {gold.currentGold}.</p>
+        <p>You have {Math.floor(gold.currentGold)}.</p>
         <p>Gold per second: {gold.goldPerSecond}</p>
         <button
           className="App-link"

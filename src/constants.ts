@@ -32,5 +32,5 @@ export const generatorsConfig = {
   dwarf,
 };
 
-// we auto mine 4 times per second
+// frequency to calculate current gold available
 export const UPDATE_FREQUENCY = 4;
