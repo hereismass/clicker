@@ -4,36 +4,12 @@ import {
   generatorsConfig,
   UPDATE_FREQUENCY,
   type GeneratorType,
+  type ClickerState,
 } from "./constants";
 
-const BASE_CLICK_GOLD = 1;
+import { loadState } from "./utils/localstorage";
 
-export interface ClickerState {
-  currentGold: number;
-  totalGold: number;
-  // computed but used for both selectors and actions, so we store it in the state
-  goldPerSecond: number;
-  pickaxe: {
-    count: number;
-    totalGold: number;
-  };
-  jackhammer: {
-    count: number;
-    totalGold: number;
-  };
-  drill: {
-    count: number;
-    totalGold: number;
-  };
-  laser: {
-    count: number;
-    totalGold: number;
-  };
-  dwarf: {
-    count: number;
-    totalGold: number;
-  };
-}
+const BASE_CLICK_GOLD = 1;
 
 const initialState: ClickerState = {
   currentGold: 0,
@@ -63,7 +39,9 @@ const initialState: ClickerState = {
 
 export const clickerSlice = createSlice({
   name: "clicker",
-  initialState,
+  initialState: () => {
+    return loadState().clicker ?? initialState;
+  },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     click: (state) => {

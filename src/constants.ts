@@ -63,5 +63,32 @@ export const generatorsConfig = {
   dwarf,
 };
 
+export interface ClickerState {
+  currentGold: number;
+  totalGold: number;
+  // computed but used for both selectors and actions, so we store it in the state
+  goldPerSecond: number;
+  pickaxe: {
+    count: number;
+    totalGold: number;
+  };
+  jackhammer: {
+    count: number;
+    totalGold: number;
+  };
+  drill: {
+    count: number;
+    totalGold: number;
+  };
+  laser: {
+    count: number;
+    totalGold: number;
+  };
+  dwarf: {
+    count: number;
+    totalGold: number;
+  };
+}
+
 // frequency to calculate current gold available
 export const UPDATE_FREQUENCY = 4;
