@@ -17,6 +17,14 @@ export interface ClickerState {
     count: number;
     totalGold: number;
   };
+  jackhammer: {
+    count: number;
+    totalGold: number;
+  };
+  drill: {
+    count: number;
+    totalGold: number;
+  };
   laser: {
     count: number;
     totalGold: number;
@@ -32,6 +40,14 @@ const initialState: ClickerState = {
   totalGold: 0,
   goldPerSecond: 0,
   pickaxe: {
+    count: 0,
+    totalGold: 0,
+  },
+  jackhammer: {
+    count: 0,
+    totalGold: 0,
+  },
+  drill: {
     count: 0,
     totalGold: 0,
   },
