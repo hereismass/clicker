@@ -1,7 +1,147 @@
 
 .icon {
-  object-fit: none;
-  object-position: 0 0;
-  width: 32px;
-  height: 32px;
+  background-image: url(./items.png);
+  --n:1;
+  --i:0; 
+  --j:0; 
+
+  height:calc(32px * var(--n));
+  width:calc(32px * var(--n));
+  background-position:calc(var(--i) * var(--n) * 32px) calc(var(--j) * var(--n) * 32px);
+  background-size:calc(160px * var(--n)) calc(160px * var(--n));
+}
+
+.icon-helmet1 {
+  --i: 0;
+  --j: 0;
+}
+
+.icon-shovel {
+  --i: -1;
+  --j: 0;
+}
+
+.icon-pick1 {
+  --i: -2;
+  --j: 0;
+}
+
+.icon-pick2 {
+  --i: -3;
+  --j: 0;
+}
+
+.icon-hammer {
+  --i: -4;
+  --j: 0;
+}
+
+.icon-helmet2 {
+  --i: 0;
+  --j: -1;
+}
+
+.icon-grey_gem {
+  --i: 0;
+  --j: -2;
+}
+.icon-grey_stone {
+  --i: 0;
+  --j: -3;
+}
+.icon-tnt {
+  --i: 0;
+  --j: -4;
+}
+
+.icon-drill {
+  --i: -1;
+  --j: -1;
+}
+
+.icon-blue_gem {
+  --i: -2;
+  --j: -1;
+}
+
+.icon-orange_gem {
+  --i: -3;
+  --j: -1;
+}
+
+.icon-gold_gem {
+  --i: -4;
+  --j: -1;
+}
+
+.icon-coal_gem {
+  --i: -1;
+  --j: -2;
+}
+
+.icon-blue_stone {
+  --i: -2;
+  --j: -2;
+}
+
+.icon-orange_stone {
+  --i: -3;
+  --j: -2;
+}
+
+.icon-gold_stone {
+  --i: -4;
+  --j: -2;
+}
+
+.icon-coal_stone {
+  --i: -1;
+  --j: -3;
+}
+
+.icon-torch {
+  --i: -2;
+  --j: -3;
+}
+
+.icon-chest {
+  --i: -3;
+  --j: -3;
+}
+
+.icon-key {
+  --i: -4;
+  --j: -3;
+}
+
+.icon-car_empty {
+  --i: -1;
+  --j: -4;
+}
+
+.icon-rail {
+  --i: -2;
+  --j: -4;
+}
+
+.icon-car_full {
+  --i: -3;
+  --j: -4;
+}
+
+.icon-backpack {
+  --i: -4;
+  --j: -4;
+}
+
+.size-s {
+  --n: 1;
+}
+
+.size-m {
+  --n: 2;
+}
+
+.size-l {
+  --n: 3;
 }

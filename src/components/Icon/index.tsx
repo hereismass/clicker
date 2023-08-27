@@ -1,3 +1,5 @@
+import items from "./items.png";
+import "./Icon.css";
 export type ItemType =
   | "helmet1"
   | "helmet2"
@@ -25,20 +27,11 @@ export type ItemType =
   | "coal_gem"
   | "coal_stone";
 
-export interface GenerationIconType {
+export interface IconType {
   item: ItemType;
   size: "s" | "m" | "l";
 }
 
-export const GeneratorIcon = ({
-  item,
-  size = "s",
-}: GenerationIconType): JSX.Element => {
-  return (
-    <img
-      className={`icon ${item} size-${size}`}
-      src="item.png"
-      alt={`${item} item`}
-    />
-  );
+export const Icon = ({ item, size = "s" }: IconType): JSX.Element => {
+  return <div className={`icon icon-${item} size-${size}`} />;
 };
