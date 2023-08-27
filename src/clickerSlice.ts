@@ -40,7 +40,7 @@ const initialState: ClickerState = {
 export const clickerSlice = createSlice({
   name: "clicker",
   initialState: () => {
-    return loadState().clicker ?? initialState;
+    return loadState() ?? initialState;
   },
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
